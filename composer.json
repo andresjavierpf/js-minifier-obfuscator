@@ -1,0 +1,33 @@
+{
+    "name": "andresjavierpf/js-minifier-obfuscator",
+    "type": "library",
+    "description": "A Composer plugin to minify and obfuscate JavaScript files",
+    "license": "MIT",
+    "version": "0.1.0",
+    "authors": [
+        {
+            "name": "Andrés J. Pavón Fernández",
+            "email": "ajavier900710@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "tedivm/jshrink": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Andrusdev\\JsMinifierObfuscator\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.2-dev"
+        },
+        "class": "Andrusdev\\JsMinifierObfuscator\\JsMinifierObfuscator"
+    },
+    "scripts": {
+        "pre-autoload-dump": [
+            "Andrusdev\\JsMinifierObfuscator\\JsMinifierObfuscator::minifyAndObfuscate"
+        ]
+    }
+}

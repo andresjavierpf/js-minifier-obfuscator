@@ -28,8 +28,8 @@ class JsMinifierObfuscator
                 $file_js_content = Minifier::minify($file_js_content, ['flaggedComments' => false]);
 
                 // Obfuscate
-                $hunter = new HunterObfuscator($file_js_content);
-                $file_js_content = $hunter->Obfuscate();
+                /* $hunter = new HunterObfuscator($file_js_content);
+                $file_js_content = $hunter->Obfuscate(); */
 
                 file_put_contents($file_path, $file_js_content);
                 $event->getIO()->write(sprintf('Minify and Obfuscate: End for file %s', $file_path));
